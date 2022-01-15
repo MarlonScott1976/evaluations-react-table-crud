@@ -1,6 +1,5 @@
 import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Edit from "./Edit";
 import Home from "./Home";
@@ -13,7 +12,7 @@ import "./App.css";
 /* App component -- API data */
 
 function App() {
-  const { loading, error, data } = useQuery(ALL_USERS_QUERY);
+  const { loading, data } = useQuery(ALL_USERS_QUERY);
   console.log(data);
 
   if (loading) {

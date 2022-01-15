@@ -36,7 +36,7 @@ const GET_USER_QUERY = gql`
 function Edit({ users }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { loading, error, data } = useQuery(GET_USER_QUERY, { variables: { email: id } });
+  const { data } = useQuery(GET_USER_QUERY, { variables: { email: id } });
   const [userName, setUserName] = useState("");
   const [userRole, setUserRole] = useState("");
 
